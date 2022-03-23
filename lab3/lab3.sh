@@ -1,13 +1,22 @@
 #!/bin/sh
 
 printf "\n backup directory is lab3 and the directory to be deleted is in Downloads\n"
-printf "\n\n  pwd for backup directory\n"
 
-pwd
+printf "\n\n  removing read and write permissions from everyone besides user \n"
 
-printf "\n ls for backup directory's location \n"
+printf "\n  before: \n"
 
 ls -l
+
+printf "\n  after: \n"
+chmod -rw ./lab3/
+chmod u+rw ./lab3/
+
+ls -l
+
+printf "\n  pwd for backup directory\n"
+
+pwd
 
 printf "\n\n ls inside of the backup directory \n"
 
